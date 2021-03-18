@@ -15,7 +15,7 @@ $email = $randomstring . "@gmail.com";
    $mp3name = $filename . ".mp3";
    
    file_put_contents($wavname,file_get_contents($url));
-   $command = 'cd ..\lame && lame.exe -q0 -b320 "../vfproxy/' . $wavname . '" "../vfproxy/' . $mp3name . '"';
+   $command = 'cd ..\lame && lame.exe -q0 -b128 --resample 16 "../vfproxy/' . $wavname . '" "../vfproxy/' . $mp3name . '"';
    shell_exec($command);
    unlink($wavname);
    $file = $mp3name;
