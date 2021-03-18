@@ -3,52 +3,6 @@
 $vName = $_GET['voice'];
 $text = $_GET['msg'];
 
-$vfArr=array(
-	"Conrad",
-	"Kevin",
-	"Kayla",
-	"Warren",
-	"EvilGenius",
-	"RansomNote",
-	"French-fry",
-	"Duchess",
-	"Linda",
-	"Tamika",
-	"Designer",
-	"Charlie",
-	"Millie",
-	"David",
-	"Diesel",
-	"JerkFace",
-	"Dog",
-	"Vixen",
-	"Vlad",
-	"William",
-	"ShyGirl",
-	"Damien",
-	"JerseyGirl",
-	"Frank",
-	"Kidaroo",
-	"Susan",
-	"Emily",
-	"Duncan",
-	"Gregory",
-	"Princess",
-	"Obama",
-	"Shouty",
-	"Robot",
-	"Dallas",
-	"Wiseguy",
-	"Diane",
-	"Amy",
-	"Walter",
-	"Zach",
-	"Callie",
-	"TopHat",
-	"Lawrence",
-	"Belle",
-);
-
    $url = 'https://api.voiceforge.com/swift_engine?HTTP-X-API-KEY=9a272b4&voice=' . $vName . '&msg=' . urlencode($text) . '&email=undefined';
    
    $filename = md5($vName . $text . date("mdyhisA"));
