@@ -5,6 +5,7 @@
 
 No online, pre-configured version of it exists yet, so here's how to set it up yourself:
 
+First, install [WampServer](http://www.wampserver.com/en/) then clone/download this project. When you're done, unzip the folder, copy the path where you unzipped the folder, and follow these steps:
 * Navigate to `localhost`
 * Click on "Add a Virtual Host"
 * Name the virtual space whatever you want, preferrably "vfproxy".
