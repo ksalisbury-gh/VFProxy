@@ -2,8 +2,11 @@
 
 $vName = $_GET['voice'];
 $text = $_GET['msg'];
+$permitted_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+$randomstring = substr(str_shuffle($permitted_chars), 0, 20);
+$email = $randomstring . "@gmail.com";
 
-   $url = 'https://api.voiceforge.com/swift_engine?HTTP-X-API-KEY=9a272b4&voice=' . $vName . '&msg=' . urlencode($text) . '&email=undefined';
+   $url = 'https://api.voiceforge.com/swift_engine?HTTP-X-API-KEY=9a272b4&voice=' . $vName . '&msg=' . urlencode($text) . '&email=' . $email;
    
    $filename = md5($vName . $text . date("mdyhisA"));
    
