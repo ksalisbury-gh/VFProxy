@@ -3,8 +3,8 @@
 
 ## How to use
 
-No online, pre-configured version of it exists yet, so here's how to set it up yourself:
-
+Method 1: Test it out by going to the online, pre-configured server at [this link](http://seamus-server.tk/vfproxy/speech.php?voice=French-fry&msg=This%20is%20a%20test.). See `VOICELIST.txt` in this repository for all the supported voice arguments. Keep in mind that server automatically shuts off every night at 11PM CST/12AM EST/04:00 UTC and turns back on sometime the next morning.
+Method 2: Set it up yourself by following these instructions:
 First, install [WampServer](http://www.wampserver.com/en/) then clone/download this project. When you're done, unzip the folder, copy the path where you unzipped the folder, and follow these steps:
 * Navigate to `localhost`
 * Click on "Add a Virtual Host"
@@ -15,6 +15,8 @@ First, install [WampServer](http://www.wampserver.com/en/) then clone/download t
 * Wait 5-10 seconds and make sure a command prompt window pops up for a split-second.
 * After all that, navigate to `http://{YOUR_VIRTUAL_HOST_NAME}/vfproxy/speech.php?voice=David&text=Hello%20world.`. `{YOUR_VIRTUAL_HOST_NAME}` being whatever you set the virtual host name to, e.g. I set mine to "vfproxy".
 
+This will work with XAMPP too since despite the different software it seems to work VERY similar.
+
 ### Licenses
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
@@ -23,7 +25,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * Credit to Cepstral for the original voices.
 * Credit to LAME for their MP3-encoding software.
-* Special thanks to ItsCrazyScout for going through the VoiceForge APK and finding the new API link.
+* Special thanks to ItsCrazyScout for going through the VoiceForge APK and finding the new API link, as well as being kind enough to host this program on his website to demonstrate an online, pre-configured version.
 
 ### Disclaimer
 
