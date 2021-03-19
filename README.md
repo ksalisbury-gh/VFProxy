@@ -3,7 +3,7 @@
 
 ## How to use
 
-* Method 1: Test it out by going to the online, pre-configured server at [this link](http://seamus-server.tk/vfproxy/speech.php?voice=French-fry&msg=This%20is%20a%20test.). See `VOICELIST.txt` in this repository for all the supported voice arguments. Keep in mind that server automatically shuts off every night at 11PM CST/12AM EST/04:00 UTC and turns back on sometime the next morning.
+* Method 1: Test it out by going to the online, pre-configured server at [this link](http://seamus-server.tk/vfproxy/speech.php?voice=French-fry&msg=This%20is%20a%20test.). See `VOICELIST.txt` in this repository for all the supported voice arguments. Keep in mind that the server being used to host this automatically shuts off every night at 11PM CST/12AM EST/04:00 UTC and turns back on sometime the next morning.
 * Method 2: Set it up yourself by following these instructions:
 
 First, install [WampServer](http://www.wampserver.com/en/) then clone/download this project. When you're done, unzip the folder, copy the path where you unzipped the folder, and follow these steps:
