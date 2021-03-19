@@ -5,7 +5,7 @@ $text = $_GET['msg'];
 $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 $randomstring = substr(str_shuffle($permitted_chars), 10, 20);
 $input = array("@gmail.com", "@hotmail.com", "@outlook.com", "@comcast.net", "@aol.com", "@yandex.com", "@icloud.com", "@yandex.com", "@mail.com");
-$rand_keys = array_rand($input, 1)
+$rand_keys = array_rand($input, 1);
 $domain = $input[$rand_keys[0]];
 $email = $randomstring . $domain;
 
