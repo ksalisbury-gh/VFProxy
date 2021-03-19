@@ -2,9 +2,12 @@
 
 $vName = $_GET['voice'];
 $text = $_GET['msg'];
-$permitted_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-$randomstring = substr(str_shuffle($permitted_chars), 0, 20);
-$email = $randomstring . "@gmail.com";
+$permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+$randomstring = substr(str_shuffle($permitted_chars), 10, 20);
+$input = array("@gmail.com", "@hotmail.com", "@outlook.com", "@comcast.net", "@aol.com", "@yandex.com", "@icloud.com", "@yandex.com", "@mail.com");
+$rand_keys = array_rand($input, 1)
+$domain = $input[$rand_keys[0]];
+$email = $randomstring . $domain;
 
    $url = 'https://api.voiceforge.com/swift_engine?HTTP-X-API-KEY=9a272b4&voice=' . $vName . '&msg=' . urlencode($text) . '&email=' . $email;
    
