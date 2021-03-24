@@ -2,11 +2,11 @@
  A PHP wrapper of the new VoiceForge API, which automatically converts it to MP3 using LAME for compatibility with the LVM.
 
 ## How to use
-Method 1
+Method 1:
 * Test it out by going to the online, pre-configured server at [this link](http://seamus-server.tk/vfproxy/speech.php?voice=David&msg=Hello%20world!). See `VOICELIST.txt` in this repository for all the supported voice arguments. Keep in mind that the server being used to host this automatically shuts off every night at 11PM CST/12AM EST/04:00 UTC and turns back on sometime the next morning.
 
-Method 2
-* Set it up yourself by following these instructions:
+Method 2:
+Set it up yourself by following these instructions:
 
 * Execute `start.bat`
 * Navigate to `http://localhost:8080/vfproxy/speech.php?voice=David&text=Hello%20world!`. If you chose to launch with a different port however, replace `8080` with the port number you chose.
