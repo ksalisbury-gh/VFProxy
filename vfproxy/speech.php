@@ -2,11 +2,11 @@
 
 $vName = $_GET['voice'];
 $text = $_GET['msg'];
-$permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+$permitted_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 $randomstring = substr(str_shuffle($permitted_chars), 10, 20);
-$input = array("@gmail.com", "@hotmail.com", "@outlook.com", "@comcast.net", "@aol.com", "@yandex.com", "@icloud.com", "@yahoo.com", "@mail.com");
-$rand_keys = array_rand($input, 1);
-$domain = $input[$rand_keys[0]];
+$arr = array("@gmail.com", "@hotmail.com", "@outlook.com", "@comcast.net", "@aol.com", "@yandex.com", "@icloud.com", "@yahoo.com", "@mail.com");
+shuffle($arr);
+$domain = $arr[0];
 $email = $randomstring . $domain;
 
    $url = 'https://api.voiceforge.com/swift_engine?HTTP-X-API-KEY=9a272b4&voice=' . $vName . '&msg=' . urlencode($text) . '&email=' . $email;
@@ -22,11 +22,33 @@ $email = $randomstring . $domain;
    shell_exec($command);
    unlink($wavname);
    $file = $mp3name;
-   playFile($file);
+   if (isset($_GET['download'])) {
+   if (($_GET['download']) == "true") {
+	   downloadFile($file);
+   }
+   } else {
+	   playFile($file);
+   }
    unlink($mp3name);
+
+function downloadFile($file){
+	header('Content-Description: File Transfer');
+	header('Content-Type: audio/mp3');
+	header('Content-Disposition: attachment; filename="'.basename($file).'"');
+	header('Expires: 0');
+	header('Cache-Control: must-revalidate');
+	header('Pragma: public');
+	header('Content-Length: ' . filesize($file));
+	readfile($file);
+}
 
 function playFile($file){
 	header('Content-Type: audio/mp3');
+	header('Content-Disposition: inline');
+	header('Expires: 0');
+	header('Cache-Control: must-revalidate');
+	header('Pragma: public');
+	header('Content-Length: ' . filesize($file));
 	readfile($file);
 }
 ?>
