@@ -9,7 +9,7 @@ Method 2:
 Set it up yourself by following these instructions:
 
 * Execute `start.bat`
-* Navigate to `http://localhost:8080/vfproxy/speech.php?voice=David&text=Hello%20world!`. If you chose to launch with a different port however, replace `8080` with the port number you chose.
+* Navigate to `http://localhost:8080/vfproxy/speech.php?voice=David&msg=Hello%20world!`. If you chose to launch with a different port however, replace `8080` with the port number you chose.
 
 ### Parameters
 
