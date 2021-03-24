@@ -9,6 +9,12 @@
 * Execute `start.bat`
 * Navigate to `http://localhost:8080/vfproxy/speech.php?voice=David&text=Hello%20world!`. If you chose to launch with a different port however, replace `8080` with the port number you chose.
 
+### Parameters
+
+* `?voice=`: Where you specify your voice. The voice arguments that will work can be found in the `VOICELIST.txt` file.
+* `&msg=`: Where you specify what you want the TTS to say.
+* `&download=true` (Optional): Downloads the file rather than embedding it in your browser.
+
 ### Licenses
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
