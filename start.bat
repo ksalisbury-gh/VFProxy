@@ -11,7 +11,7 @@ echo Otherwise, press Enter.
 echo:
 set /p PORT= Port: 
 echo Running php.exe...
-ping 127.0.0.1 -2>nul
+PING -n 3 127.0.0.1>nul
 echo:
 cd vfproxy
 start "" "http://localhost:%PORT%/vfproxy/speech.php?voice=David&msg=Hello%20World!"
